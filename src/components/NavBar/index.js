@@ -1,59 +1,89 @@
-import React from 'react';
-import { FaBars } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { IconContext } from 'react-icons/lib';
 
+import { Button } from '../../globalStyles';
 import { colors } from '../../constants/theme';
-
 import {
   Nav,
-  NavBarContainer,
+  NavbarContainer,
   NavLogo,
   MobileIcon,
   NavMenu,
   NavItem,
+  NavItemBtn,
   NavLinks,
-  NavBtn,
   NavBtnLink,
   Img,
 } from './NavBarElements';
 
-const NavBar = ({ toggle, isOpen }) => {
+function Navbar() {
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  // window.addEventListener('resize', showButton);
+
   return (
     <>
-      <Nav>
-        <NavBarContainer>
-          <Img src={require('../../images/goloanLogo.svg')} />
-
-          <MobileIcon onClick={toggle}>
-            <FaBars color={colors.veryDark} />
-          </MobileIcon>
-
-          <NavMenu>
-            <NavItem>
-              <NavLinks to="services">Services</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="about">About</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="signup">How it works</NavLinks>
-            </NavItem>
-          </NavMenu>
-          <NavBtn>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{
-                scale: 0.8,
-                borderRadius: '100%',
-              }}
-            >
-              <NavBtnLink to="/signin">Sign In</NavBtnLink>
-            </motion.div>
-          </NavBtn>
-        </NavBarContainer>
-      </Nav>
+      <IconContext.Provider value={{ color: colors.primary }}>
+        <Nav>
+          <NavbarContainer>
+            <NavLogo href="/" onClick={closeMobileMenu}>
+              <Img src={require('../../images/goloanLogo.svg')} />
+            </NavLogo>
+            <MobileIcon onClick={handleClick}>
+              {click ? <FaTimes /> : <FaBars />}
+            </MobileIcon>
+            <NavMenu onClick={handleClick} click={click}>
+              <NavItem>
+                <NavLinks href="/" onClick={closeMobileMenu}>
+                  Home
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks href="/services" onClick={closeMobileMenu}>
+                  Services
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks href="/about" onClick={closeMobileMenu}>
+                  About Us
+                </NavLinks>
+              </NavItem>
+              <NavItemBtn>
+                {button ? (
+                  <NavBtnLink href="/sign-up">
+                    <Button primary>Login</Button>
+                  </NavBtnLink>
+                ) : (
+                  <NavBtnLink href="/sign-up">
+                    <Button onClick={closeMobileMenu} fontBig primary>
+                      Login
+                    </Button>
+                  </NavBtnLink>
+                )}
+              </NavItemBtn>
+            </NavMenu>
+          </NavbarContainer>
+        </Nav>
+      </IconContext.Provider>
     </>
   );
-};
+}
 
-export default NavBar;
+export default Navbar;

@@ -27,12 +27,17 @@ export const PricingWrapper = styled.div`
 export const PricingHeading = styled.h1`
   color: ${colors.white};
   font-size: 48px;
+  margin-bottom: 10px;
 `;
 
 export const PricingSubHeading = styled.h3`
   color: ${colors.grey};
   font-size: 24px;
-  margin-top: -20px;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 960px) {
+    text-align: center;
+  }
 `;
 
 export const PricingContainer = styled.div`
@@ -84,6 +89,10 @@ export const PricingCardInfo = styled.div`
   align-items: center;
   color: ${colors.dark};
   text-align: center;
+
+  @media screen and (max-width: 960px) {
+    height: 210px;
+  }
 `;
 
 export const PricingCardIcon = styled.div`
@@ -104,10 +113,9 @@ export const Img = styled.img`
 
 export const PricingCardPlan = styled.h3`
   font-size: 18px;
-  margin-top: -3px;
+  margin-bottom: 10px;
 `;
 export const PricingPlanText = styled.p`
-  font-size: 14px;
+  font-size: 18px;
   color: ${colors.grey};
-  margin-top: -10px;
 `;

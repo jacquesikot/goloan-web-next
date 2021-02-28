@@ -1,51 +1,60 @@
-import React, { useState } from 'react';
-
-// import video from '../../videos/video.mp4';
-import { Button } from '..';
-
+import React from 'react';
+import Link from 'next/link';
+import { Container, Button } from '../../globalStyles';
 import {
-  HeroContainer,
-  HeroBg,
-  VideoBg,
-  HeroContent,
-  HeroBtnWrapper,
-  HeroH1,
-  HeroP,
-  ArrowForward,
-  ArrowRight,
+  InfoSec,
+  InfoRow,
+  InfoColumn,
+  TextWrapper,
+  TopLine,
+  Heading,
+  Subtitle,
+  ImgWrapper,
+  Img,
 } from './HeroElements';
 
-const Hero = () => {
-  const [hover, setHover] = useState(false);
-
-  const onHover = () => {
-    setHover(!hover);
-  };
-
+function InfoSection({
+  primary,
+  lightBg,
+  topLine,
+  lightTopLine,
+  lightText,
+  lightTextDesc,
+  headline,
+  description,
+  buttonLabel,
+  img,
+  alt,
+  imgStart,
+  start,
+}) {
   return (
     <>
-      <HeroContainer>
-        <HeroContent>
-          <HeroH1>Corper Loans Made Easy</HeroH1>
-          <HeroP>
-            Are you a serving NYSC Corper? Get up to N20k in monthly Loans in
-            under 5 mins!
-          </HeroP>
-          <HeroBtnWrapper>
-            <Button
-              primary={true}
-              dark={true}
-              to="signup"
-              onMouseEnter={onHover}
-              onMouseLeave={onHover}
-            >
-              Get Started {hover ? <ArrowForward /> : <ArrowRight />}
-            </Button>
-          </HeroBtnWrapper>
-        </HeroContent>
-      </HeroContainer>
+      <InfoSec lightBg={lightBg}>
+        <Container>
+          <InfoRow imgStart={imgStart}>
+            <InfoColumn>
+              <TextWrapper>
+                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
+                <Heading lightText={lightText}>{headline}</Heading>
+                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
+                <Link href="/sign-up">
+                  <Button big fontBig primary={primary}>
+                    {buttonLabel}
+                  </Button>
+                </Link>
+              </TextWrapper>
+            </InfoColumn>
+            <InfoColumn>
+              <ImgWrapper start={start}>
+                <Img src={img} alt={alt} />
+              </ImgWrapper>
+            </InfoColumn>
+          </InfoRow>
+        </Container>
+      </InfoSec>
     </>
   );
-};
+}
 
-export default Hero;
+export default InfoSection;

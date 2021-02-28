@@ -1,100 +1,81 @@
 import styled from 'styled-components';
-import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 
-export const HeroContainer = styled.div`
-  background: #fff;
+export const InfoSec = styled.div`
+  color: #fff;
+  padding: 160px 0;
+  background: ${({ lightBg }) => (lightBg ? '#fff' : '#101522')};
+`;
+
+export const InfoRow = styled.div`
   display: flex;
-  justify-content: center;
+  margin: 0 -15px -15px -15px;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 0 30px;
-  height: 600px;
-  position: relative;
-  z-index: 1;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    background: '#fff';
-    z-index: 2;
-  }
+  flex-direction: ${({ imgStart }) => (imgStart ? 'row-reverse' : 'row')};
 `;
 
-export const HeroBg = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-`;
-
-export const VideoBg = styled.video`
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  background: #232a34;
-`;
-
-export const HeroContent = styled.div`
-  z-index: 3;
-  max-width: 1200px;
-  position: absolute;
-  padding: 8px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-export const HeroH1 = styled.h1`
-  color: #000;
-  font-size: 48px;
-  text-align: center;
+export const InfoColumn = styled.div`
+  margin-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 1;
+  max-width: 50%;
+  flex-basis: 50%;
 
   @media screen and (max-width: 768px) {
-    font-size: 40px;
-  }
-
-  @media screen and (max-wdith: 480px) {
-    font-size: 32px;
-  }
-`;
-export const HeroP = styled.p`
-  margin-top: 24px;
-  color: #000;
-  font-size: 24px;
-  text-align: center;
-  max-width: 600px;
-
-  @media screen and (max-wdith: 768) {
-    font-size: 40px;
-  }
-
-  @media screen and (max-wdith: 480px) {
-    font-size: 32px;
+    max-width: 100%;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
   }
 `;
 
-export const HeroBtnWrapper = styled.div`
-  margin-top: 32px;
+export const TextWrapper = styled.div`
+  max-width: 540px;
+  padding-top: 0;
+  padding-bottom: 60px;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 65px;
+  }
+`;
+
+export const ImgWrapper = styled.div`
+  max-width: 555px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
 `;
 
-export const ArrowForward = styled(MdArrowForward)`
-  margin-left: 8px;
-  font-size: 20px;
+export const TopLine = styled.div`
+  color: ${({ lightTopLine }) => (lightTopLine ? '#a9b3c1' : '#4B59F7')};
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  margin-bottom: 16px;
 `;
 
-export const ArrowRight = styled(MdKeyboardArrowRight)`
-  margin-left: 8px;
-  font-size: 20px;
+export const Img = styled.img`
+  padding-right: 0;
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  max-height: 500px;
+`;
+
+export const Heading = styled.h1`
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#1c2237')};
+`;
+
+export const Subtitle = styled.p`
+  max-width: 440px;
+  margin-bottom: 35px;
+  font-size: 18px;
+  line-height: 24px;
+  color: ${({ lightTextDesc }) => (lightTextDesc ? '#a9b3c1' : '#1c2237')};
 `;
