@@ -1,25 +1,26 @@
 import Head from 'next/head';
 
+import Layout from '../src/components/Layout';
 import {
   homeObjOne,
   homeObjThree,
   homeObjFour,
   homeObjTwo,
-} from '../pages/Data';
-import { InfoSection, Steps } from '../src/components';
+} from '../src/data/homeData';
+import { InfoSection, Steps, HeroSection } from '../src/components';
 
 export default function Home() {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Goloan - Get Loans Quickly</title>
         <link rel="icon" href="/goloanFavicon.svg" />
       </Head>
-      <InfoSection {...homeObjOne} button />
+      <HeroSection {...homeObjOne} button />
       <Steps />
       <InfoSection {...homeObjThree} />
       <InfoSection {...homeObjFour} />
       <InfoSection {...homeObjTwo} />
-    </>
+    </Layout>
   );
 }

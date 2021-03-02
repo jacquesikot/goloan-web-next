@@ -7,7 +7,7 @@ export const PricingSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: ${colors.primary};
+  background: ${colors.white};
 `;
 
 export const PricingWrapper = styled.div`
@@ -25,13 +25,15 @@ export const PricingWrapper = styled.div`
 `;
 
 export const PricingHeading = styled.h1`
-  color: ${colors.white};
+  color: ${colors.primary};
   font-size: 48px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  letter-spacing: 3px;
 `;
 
 export const PricingSubHeading = styled.h3`
-  color: ${colors.grey};
+  color: ${colors.pink};
   font-size: 24px;
   margin-bottom: 10px;
 
@@ -42,8 +44,10 @@ export const PricingSubHeading = styled.h3`
 
 export const PricingContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  z-index: 10;
+  width: 900px;
 
   @media screen and (max-width: 960px) {
     display: flex;
@@ -56,10 +60,11 @@ export const PricingContainer = styled.div`
 
 export const PricingCard = styled.div`
   background: ${colors.white};
-  width: 280px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   text-decoration: none;
-  border-radius: 7px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   &:nth-child(2) {
     margin: 24px;
@@ -86,9 +91,9 @@ export const PricingCardInfo = styled.div`
   flex-direction: column;
   height: 300px;
   padding: 24px;
-  align-items: center;
-  color: ${colors.dark};
-  text-align: center;
+  align-items: right;
+  color: ${colors.primary};
+  text-align: left;
 
   @media screen and (max-width: 960px) {
     height: 210px;
@@ -96,15 +101,11 @@ export const PricingCardInfo = styled.div`
 `;
 
 export const PricingCardIcon = styled.div`
-  margin: 10px 0;
+  margin-top: 10px;
 `;
 
 export const Img = styled.img`
-  padding-right: 0;
-  border: 0;
-  max-width: 70%;
-  vertical-align: middle;
-  display: inline-block;
+  width: ${({ width }) => (width ? width : '100px')};
 
   @media screen and (max-width: 960px) {
     max-width: 55%;
@@ -114,8 +115,27 @@ export const Img = styled.img`
 export const PricingCardPlan = styled.h3`
   font-size: 18px;
   margin-bottom: 10px;
+  font-weight: 600;
 `;
 export const PricingPlanText = styled.p`
   font-size: 18px;
   color: ${colors.grey};
+`;
+
+export const DottedLine = styled.img`
+  width: 30%;
+  position: absolute;
+  top: 1020px;
+  left: 480px;
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+`;
+
+export const BorderLine = styled.div`
+  width: 50px;
+  height: 2px;
+  background-color: ${colors.primary};
+  margin-bottom: 5px;
 `;

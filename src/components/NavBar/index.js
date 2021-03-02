@@ -15,6 +15,7 @@ import {
   NavLinks,
   NavBtnLink,
   Img,
+  Space,
 } from './NavBarElements';
 
 function Navbar() {
@@ -35,8 +36,6 @@ function Navbar() {
   useEffect(() => {
     showButton();
   }, []);
-
-  // window.addEventListener('resize', showButton);
 
   return (
     <>
@@ -65,13 +64,14 @@ function Navbar() {
                   About Us
                 </NavLinks>
               </NavItem>
+              <Space />
               <NavItemBtn>
                 {button ? (
-                  <NavBtnLink href="/sign-up">
+                  <NavBtnLink href="/login">
                     <Button primary>Login</Button>
                   </NavBtnLink>
                 ) : (
-                  <NavBtnLink href="/sign-up">
+                  <NavBtnLink href="/login">
                     <Button onClick={closeMobileMenu} fontBig primary>
                       Login
                     </Button>

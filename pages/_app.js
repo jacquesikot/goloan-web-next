@@ -1,12 +1,17 @@
-import { Layout } from '../src/components';
 import '../styles/globals.css';
+import { ChakraProvider } from '@chakra-ui/react';
+import { Global } from '@emotion/react';
+import fonts, { theme } from '../src/constants/font-face';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
+    <ChakraProvider theme={theme}>
+      <Global styles={fonts} />
       <Component {...pageProps} />
-    </Layout>
+    </ChakraProvider>
   );
 }
 
 export default MyApp;
+
+// Maybe we can keep fonts somewhere else

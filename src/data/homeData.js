@@ -12,13 +12,13 @@ export const homeObjOne = {
   lightTopLine: false,
   lightText: false,
   lightTextDesc: false,
-  topLine: 'Quick Loans',
-  headline: 'Get up to N20k in monthly loans under 5mins',
+  topLine: 'Need A Quick Loan?',
+  headline: 'Get up to N20,000 in loans instantly',
   description:
-    'Are you a serving NYSC corper? Get access to immediate loans and power your monthly hustle with goloan',
+    'Are you a salary earner? Get access to immediate loans and power your monthly hustle with goloan',
   buttonLabel: 'Get Started',
   imgStart: '',
-  img: require('../src/images/svg-1.svg'),
+  img: require('../images/svg-1.svg'),
   alt: 'Credit Card',
   start: '',
 };
@@ -35,7 +35,7 @@ export const homeObjTwo = {
     'For every loan, payment or purchase you make with us, you get points that allow you do more',
   buttonLabel: 'Learn More',
   imgStart: 'start',
-  img: require('../src/images/svg-2.svg'),
+  img: require('../images/svg-2.svg'),
   alt: 'Vault',
   start: '',
 };
@@ -52,7 +52,7 @@ export const homeObjThree = {
     'No forms, guarantors, processing fees or tidious sign up process',
   buttonLabel: '',
   imgStart: 'start',
-  img: require('../src/images/svg-3.svg'),
+  img: require('../images/svg-3.svg'),
   alt: 'instant-loan',
   start: 'true',
 };
@@ -69,7 +69,7 @@ export const homeObjFour = {
     'You can pay your bills and recharge airtime straight from our app - at the lowest possible cost',
   buttonLabel: 'Sign Up Now',
   imgStart: '',
-  img: require('../src/images/svg-3.svg'),
+  img: require('../images/svg-3.svg'),
   alt: 'Vault',
   start: 'true',
 };

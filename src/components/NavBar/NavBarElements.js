@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// import Link from 'next/link';
+import Link from 'next/link';
 
 import { Container } from '../../globalStyles';
 import { colors } from '../../constants/theme';
@@ -15,6 +15,11 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 999;
   padding: 0 80px;
+  margin-top: 10px;
+
+  @media screen and (max-width: 960px) {
+    padding-left: 50px;
+  }
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -71,10 +76,6 @@ export const NavItem = styled.li`
   height: 80px;
   border-bottom: 2px solid transparent;
 
-  &:hover {
-    border-bottom: 2px solid ${colors.primary};
-  }
-
   @media screen and (max-width: 960px) {
     width: 100%;
 
@@ -89,7 +90,7 @@ export const NavItemBtn = styled.li`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 30%;
     height: 120px;
   }
 `;
@@ -102,6 +103,7 @@ export const NavLinks = styled.div`
   padding: 0.5rem 1rem;
   height: 100%;
   cursor: pointer;
+  font-size: 16px;
 
   @media screen and (max-width: 960px) {
     text-align: center;
@@ -109,14 +111,14 @@ export const NavLinks = styled.div`
     width: 100%;
     display: table;
     color: ${colors.white};
+  }
 
-    &:hover {
-      color: ${colors.primary};
-    }
+  &:hover {
+    color: ${colors.pink};
   }
 `;
 
-export const NavBtnLink = styled.div`
+export const NavBtnLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,5 +131,9 @@ export const NavBtnLink = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 140px;
+  width: 120px;
+`;
+
+export const Space = styled.div`
+  width: 40px;
 `;

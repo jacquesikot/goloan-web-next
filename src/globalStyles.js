@@ -28,12 +28,6 @@ export const Button = styled.button`
   cursor: pointer;
   width: 100%;
 
-  &:hover {
-    transition: all 0.3s ease-out;
-    background-color: ${({ primary }) =>
-      primary ? colors.secondary : colors.primary};
-  }
-
   @media screen and (max-width: 960px) {
     width: 100%;
   }

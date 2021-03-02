@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { Container, Button } from '../../globalStyles';
+import { motion } from 'framer-motion';
+
+import { Container, Button, BtnWrapper } from '../../globalStyles';
 import {
   InfoSec,
   InfoRow,
@@ -27,6 +29,7 @@ function InfoSection({
   alt,
   imgStart,
   start,
+  button,
 }) {
   return (
     <>
@@ -38,11 +41,23 @@ function InfoSection({
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                <Link href="/sign-up">
-                  <Button big fontBig primary={primary}>
-                    {buttonLabel}
-                  </Button>
-                </Link>
+                {button ? (
+                  <Link href="/sign-up">
+                    <BtnWrapper>
+                      <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{
+                          scale: 0.8,
+                          borderRadius: '100%',
+                        }}
+                      >
+                        <Button big fontBig primary={primary}>
+                          {buttonLabel}
+                        </Button>
+                      </motion.div>
+                    </BtnWrapper>
+                  </Link>
+                ) : null}
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>
