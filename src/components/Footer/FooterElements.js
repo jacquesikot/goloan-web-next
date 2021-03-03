@@ -1,22 +1,13 @@
 import styled from 'styled-components';
 import { FaMagento } from 'react-icons/fa';
-<<<<<<< HEAD
 import Link from 'next/link';
-=======
-// import Link from 'next/link';
->>>>>>> 3b1a8a8949a242ff9d83ccbeb2914f15288935b8
 
 import { colors } from '../../constants/theme';
 
 export const FooterContainer = styled.div`
-<<<<<<< HEAD
   background-color: ${colors.primaryDark};
   padding: 4rem 0 2rem 0;
   margin-top: 100px;
-=======
-  background-color: ${colors.veryDark};
-  padding: 4rem 0 2rem 0;
->>>>>>> 3b1a8a8949a242ff9d83ccbeb2914f15288935b8
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +49,6 @@ export const Form = styled.form`
 
 export const FormInput = styled.input`
   padding: 10px 20px;
-<<<<<<< HEAD
   border-radius: 7px;
   margin-right: 10px;
   outline: none;
@@ -68,17 +58,6 @@ export const FormInput = styled.input`
 
   &::placeholder {
     color: ${colors.primary};
-=======
-  border-radius: 2px;
-  margin-right: 10px;
-  outline: none;
-  border: none;
-  font-size: 16px;
-  border: 1px solid #fff;
-
-  &::placeholder {
-    color: #242424;
->>>>>>> 3b1a8a8949a242ff9d83ccbeb2914f15288935b8
   }
 
   @media screen and (max-width: 820px) {
@@ -105,11 +84,7 @@ export const SocialMediaWrap = styled.div`
   }
 `;
 
-<<<<<<< HEAD
 export const SocialLogo = styled(Link)`
-=======
-export const SocialLogo = styled.div`
->>>>>>> 3b1a8a8949a242ff9d83ccbeb2914f15288935b8
   color: #fff;
   justify-self: start;
   cursor: pointer;
