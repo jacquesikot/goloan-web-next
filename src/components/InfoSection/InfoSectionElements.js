@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { colors } from '../../constants/theme';
 
 export const InfoSec = styled.div`
+<<<<<<< HEAD
   color: ${colors.white};
   padding: 100px 0;
   background: ${({ lightBg }) => (lightBg ? colors.white : colors.veryDark)};
@@ -10,6 +11,11 @@ export const InfoSec = styled.div`
   @media screen and (max-width: 960px) {
     padding: 0 0;
   }
+=======
+  color: #fff;
+  padding: 100px 0;
+  background: ${({ lightBg }) => (lightBg ? colors.white : colors.veryDark)};
+>>>>>>> 3b1a8a8949a242ff9d83ccbeb2914f15288935b8
 `;
 
 export const InfoRow = styled.div`
@@ -38,7 +44,11 @@ export const InfoColumn = styled.div`
 
 export const TextWrapper = styled.div`
   max-width: 540px;
+<<<<<<< HEAD
   margin-top: 80px;
+=======
+  padding-top: 0;
+>>>>>>> 3b1a8a8949a242ff9d83ccbeb2914f15288935b8
   padding-bottom: 60px;
 
   @media screen and (max-width: 768px) {
@@ -53,7 +63,11 @@ export const ImgWrapper = styled.div`
 `;
 
 export const TopLine = styled.div`
+<<<<<<< HEAD
   color: ${({ lightTopLine }) => (lightTopLine ? colors.grey : colors.pink)};
+=======
+  color: ${({ lightTopLine }) => (lightTopLine ? colors.grey : colors.primary)};
+>>>>>>> 3b1a8a8949a242ff9d83ccbeb2914f15288935b8
   font-size: 18px;
   line-height: 16px;
   font-weight: 700;
@@ -75,7 +89,11 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
+<<<<<<< HEAD
   color: ${({ lightText }) => (lightText ? colors.light : colors.primary)};
+=======
+  color: ${({ lightText }) => (lightText ? colors.light : colors.dark)};
+>>>>>>> 3b1a8a8949a242ff9d83ccbeb2914f15288935b8
 `;
 
 export const Subtitle = styled.p`
@@ -83,6 +101,10 @@ export const Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
+<<<<<<< HEAD
   color: ${({ lightTextDesc }) =>
     lightTextDesc ? colors.grey : colors.primary};
+=======
+  color: ${({ lightTextDesc }) => (lightTextDesc ? colors.grey : colors.dark)};
+>>>>>>> 3b1a8a8949a242ff9d83ccbeb2914f15288935b8
 `;
