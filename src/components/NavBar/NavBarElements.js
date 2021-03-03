@@ -15,10 +15,6 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 999;
   padding: 0 80px;
-<<<<<<< HEAD
-=======
-  margin-top: 10px;
->>>>>>> 3b1a8a8949a242ff9d83ccbeb2914f15288935b8
 
   @media screen and (max-width: 960px) {
     padding-left: 50px;
@@ -29,11 +25,6 @@ export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   height: 80px;
-<<<<<<< HEAD
-=======
-
-  ${Container}
->>>>>>> 3b1a8a8949a242ff9d83ccbeb2914f15288935b8
 `;
 
 export const NavLogo = styled.div`
@@ -68,11 +59,7 @@ export const NavMenu = styled.ul`
     display: flex;
     flex-direction: column;
     width: 100%;
-<<<<<<< HEAD
     height: 100vh;
-=======
-    height: 90vh;
->>>>>>> 3b1a8a8949a242ff9d83ccbeb2914f15288935b8
     position: absolute;
     top: 80px;
     left: ${({ click }) => (click ? 0 : '-100%')};
