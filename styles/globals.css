@@ -2,12 +2,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@font-face {
+  font-family: 'Product Sans Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Regular'),
+    url('../public/fonts/ProductSans-Regular.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Product Sans Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Italic'),
+    url('../public/fonts//ProductSans-Italic.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Product Sans Thin Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Thin Regular'),
+    url('../public/fonts/ProductSans-Thin.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Product Sans Light Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Light Regular'),
+    url('../public//fonts/ProductSans-Thin.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Product Sans Medium Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Medium Regular'),
+    url('../public/fonts/ProductSans-Medium.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Product Sans Black Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Black Regular'),
+    url('../public/fonts/ProductSans-Black.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Product Sans Thin Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Thin Italic'),
+    url('../public/fonts/ProductSans-ThinItalic.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Product Sans Light Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Light Italic'),
+    url('../public/fonts/ProductSans-LightItalic.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Product Sans Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Medium Italic'),
+    url('../public/fonts/ProductSans-MediumItalic.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Product Sans Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Bold'),
+    url('../public/fonts/ProductSans-Bold.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Product Sans Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Bold Italic'),
+    url('../public/fonts/ProductSans-BoldItalic.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Product Sans Black Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Black Italic'),
+    url('../public/fonts/ProductSans-BlackItalic.ttf') format('woff');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Product Sans Regular';
 }
 
 a {

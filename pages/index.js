@@ -6,6 +6,7 @@ import {
   homeObjThree,
   homeObjFour,
   homeObjTwo,
+  homeObjFive,
 } from '../src/data/homeData';
 import { InfoSection, HowItWorks, HeroSection } from '../src/components';
 
@@ -21,6 +22,7 @@ export default function Home() {
       <InfoSection {...homeObjThree} />
       <InfoSection {...homeObjFour} />
       <InfoSection {...homeObjTwo} />
+      <InfoSection {...homeObjFive} />
     </Layout>
   );
 }

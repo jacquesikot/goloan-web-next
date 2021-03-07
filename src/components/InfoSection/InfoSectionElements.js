@@ -86,3 +86,20 @@ export const Subtitle = styled.p`
   color: ${({ lightTextDesc }) =>
     lightTextDesc ? colors.grey : colors.primary};
 `;
+
+export const FirstText = styled.p`
+  width: 150px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  color: ${colors.dark};
+  background: ${colors.white};
+  z-index: 100;
+  position: absolute;
+  border-radius: 10px;
+  font-family: 'Product Sans Black Regular';
+  box-shadow: 0 4px 8px 0 rgba(169, 179, 193, 0.2),
+    0 6px 20px 0 rgba(169, 179, 193, 0.19);
+`;

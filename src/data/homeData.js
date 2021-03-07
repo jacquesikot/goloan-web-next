@@ -47,7 +47,7 @@ export const homeObjThree = {
   lightText: false,
   lightTextDesc: false,
   topLine: 'Instant Loans',
-  headline: 'Access to credit now made simple. Just goloan',
+  headline: 'Keep track of your credit history across financial institutions',
   description:
     'No forms, guarantors, processing fees or tidious sign up process',
   buttonLabel: '',
@@ -70,6 +70,23 @@ export const homeObjFour = {
   buttonLabel: 'Sign Up Now',
   imgStart: '',
   img: require('../images/svg-2.svg'),
+  alt: 'fast payment',
+  start: 'true',
+};
+
+export const homeObjFive = {
+  primary: false,
+  lightBg: true,
+  lightTopLine: false,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'USSD',
+  headline: 'Enjoy hassle free payments from our mobile apps at no cost',
+  description:
+    'You can pay your bills and recharge airtime straight from our app - at the lowest possible cost',
+  buttonLabel: 'Sign Up Now',
+  imgStart: '',
+  img: require('../images/oldPhone.svg'),
   alt: 'fast payment',
   start: 'true',
 };
