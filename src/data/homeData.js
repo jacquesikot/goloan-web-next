@@ -13,12 +13,12 @@ export const homeObjOne = {
   lightText: false,
   lightTextDesc: false,
   topLine: 'Need A Quick Loan?',
-  headline: 'Get up to N20,000 in loans instantly',
+  headline: 'Get up to N10,000 under 5mins',
   description:
-    'Are you a salary earner? Get access to immediate loans and power your monthly hustle with goloan',
+    'Are you a serving NYSC corper? or salary earner? Get access to immediate loans and power your monthly hustle with goloan.',
   buttonLabel: 'Get Started',
   imgStart: '',
-  img: require('../images/svg-1.svg'),
+  img: require('../images/svg-1.png'),
   alt: 'goloan',
   start: '',
 };

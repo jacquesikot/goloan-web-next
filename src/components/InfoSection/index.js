@@ -105,19 +105,9 @@ function InfoSection({
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>
-              <motion.div
-                ref={scrollRef}
-                initial="hidden"
-                animate={controls}
-                variants={variants2}
-              >
-                <FirstText>*124#</FirstText>
-              </motion.div>
-              <motion.div animate="visible" variants={variants}>
-                <ImgWrapper start={start}>
-                  <Img src={img} alt={alt} />
-                </ImgWrapper>
-              </motion.div>
+              <ImgWrapper start={start}>
+                <Img src={img} alt={alt} />
+              </ImgWrapper>
             </InfoColumn>
           </InfoRow>
         </Container>

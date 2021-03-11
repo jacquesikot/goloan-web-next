@@ -13,10 +13,13 @@ import {
   Subtitle,
   ImgWrapper,
   Img,
+  BadgeContainer,
+  IOSBadge,
+  AndroidBadge,
+  Span,
 } from './HeroElements';
 
 function InfoSection({
-  primary,
   lightBg,
   topLine,
   lightTopLine,
@@ -24,7 +27,6 @@ function InfoSection({
   lightTextDesc,
   headline,
   description,
-  buttonLabel,
   img,
   alt,
   imgStart,
@@ -44,17 +46,14 @@ function InfoSection({
                 {button ? (
                   <Link href="/sign-up">
                     <BtnWrapper>
-                      <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{
-                          scale: 0.8,
-                          borderRadius: '100%',
-                        }}
-                      >
-                        <Button big fontBig primary={primary}>
-                          {buttonLabel}
-                        </Button>
-                      </motion.div>
+                      <BadgeContainer>
+                        <IOSBadge
+                          src={require('../../images/appStoreBadge.svg')}
+                        />
+                        <AndroidBadge
+                          src={require('../../images/playStoreBadge.svg')}
+                        />
+                      </BadgeContainer>
                     </BtnWrapper>
                   </Link>
                 ) : null}

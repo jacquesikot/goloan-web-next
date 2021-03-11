@@ -16,6 +16,7 @@ import {
   NavBtnLink,
   Img,
   Space,
+  Space2,
 } from './NavBarElements';
 
 function Navbar() {
@@ -54,11 +55,13 @@ function Navbar() {
                   Home
                 </NavLinks>
               </NavItem>
+              <Space2 />
               <NavItem>
                 <NavLinks href="/services" onClick={closeMobileMenu}>
                   Services
                 </NavLinks>
               </NavItem>
+              <Space2 />
               <NavItem>
                 <NavLinks href="/about" onClick={closeMobileMenu}>
                   About Us
@@ -68,12 +71,12 @@ function Navbar() {
               <NavItemBtn>
                 {button ? (
                   <NavBtnLink href="/login">
-                    <Button primary>Login</Button>
+                    <Button primary>Sign Up</Button>
                   </NavBtnLink>
                 ) : (
                   <NavBtnLink href="/login">
-                    <Button onClick={closeMobileMenu} fontBig primary>
-                      Login
+                    <Button onClick={closeMobileMenu} primary>
+                      Sign Up
                     </Button>
                   </NavBtnLink>
                 )}

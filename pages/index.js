@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Goloan - Get Loans Quickly</title>
+        <title>Goloan - Get Quick Loans | Download Goloan App</title>
         <link rel="icon" href="/goloanFavicon.svg" />
       </Head>
       <HeroSection {...homeObjOne} button />
