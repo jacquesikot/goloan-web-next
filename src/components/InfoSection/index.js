@@ -85,23 +85,6 @@ function InfoSection({
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                {button ? (
-                  <Link href="/sign-up">
-                    <BtnWrapper>
-                      <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{
-                          scale: 0.8,
-                          borderRadius: '100%',
-                        }}
-                      >
-                        <Button big fontBig primary={primary}>
-                          {buttonLabel}
-                        </Button>
-                      </motion.div>
-                    </BtnWrapper>
-                  </Link>
-                ) : null}
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>

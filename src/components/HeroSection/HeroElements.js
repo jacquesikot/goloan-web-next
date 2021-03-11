@@ -33,6 +33,7 @@ export const TextWrapper = styled.div`
   max-width: 580px;
   padding-top: 0;
   padding-bottom: 60px;
+  margin-bottom: 80px;
 
   @media screen and (max-width: 768px) {
     padding-bottom: 65px;
@@ -40,7 +41,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const ImgWrapper = styled.div`
-  max-width: 555px;
+  /* max-width: 700px; */
   margin-bottom: 30px;
   display: flex;
   justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
@@ -51,8 +52,6 @@ export const TopLine = styled.div`
   font-size: 18px;
   line-height: 16px;
   font-family: 'Product Sans Regular';
-  font-weight: 400;
-  letter-spacing: 1.4px;
   margin-bottom: 16px;
 `;
 
@@ -72,7 +71,6 @@ export const Heading = styled.h1`
   width: 80%;
   line-height: 1.1;
   font-weight: 600;
-  letter-spacing: 1.4px;
   color: ${({ lightText }) => (lightText ? colors.light : colors.primary)};
 `;
 
@@ -80,10 +78,9 @@ export const Subtitle = styled.p`
   max-width: 540px;
   margin-bottom: 35px;
   font-size: 18px;
-  font-family: 'Product Sans Thin Regular';
+  font-family: 'Product Sans Regular';
   line-height: 24px;
-  color: ${({ lightTextDesc }) =>
-    lightTextDesc ? colors.grey : colors.primary};
+  color: rgba(16, 10, 57, 0.65);
 `;
 
 export const BadgeContainer = styled.div`

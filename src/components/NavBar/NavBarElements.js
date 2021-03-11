@@ -49,18 +49,19 @@ export const MobileIcon = styled.div`
 
   @media screen and (max-width: 960px) {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-right: 30px;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    margin-bottom: 60px;
+    margin-right: 50px;
   }
 
-  @media screen and (max-width: 414px) {
-    padding-top: 1px;
-    padding-right: 0px;
+  @media screen and (max-width: 375px) {
+    margin-right: -100px;
+  }
+
+  @media screen and (min-width: 400px) {
+    margin-right: -80px;
   }
 `;
 
@@ -71,16 +72,7 @@ export const NavMenu = styled.ul`
   text-align: center;
 
   @media screen and (max-width: 960px) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 80px;
-    left: ${({ click }) => (click ? 0 : '-100%')};
-    opacity: 1;
-    transition: all 0.5s ease;
-    background: ${colors.veryDark};
+    display: none;
   }
 `;
 
