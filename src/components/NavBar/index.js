@@ -61,7 +61,11 @@ function Navbar() {
               </NavItem>
               <Space2 />
               <NavItem>
-                <ScrollLink>Services</ScrollLink>
+                <ScrollLink>
+                  <NavLinks href="#services" onClick={closeMobileMenu}>
+                    Services
+                  </NavLinks>
+                </ScrollLink>
               </NavItem>
               <Space2 />
               <NavItem>
