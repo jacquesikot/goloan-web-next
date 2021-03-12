@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { colors } from '../../constants/theme';
-import { BtnWrapper } from '../../globalStyles';
 import {
   InfoSec,
   InfoRow,
@@ -25,12 +24,11 @@ function InfoSection({
   lightText,
   lightTextDesc,
   headline,
-  description,
+
   img,
   alt,
   imgStart,
   start,
-  button,
 }) {
   const returnSpan = () => <Span>goloan.</Span>;
 
