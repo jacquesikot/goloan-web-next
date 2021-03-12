@@ -7,7 +7,10 @@ export const PricingSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    padding: 20px 0;
+  }
 `;
 
 export const PricingWrapper = styled.div`
@@ -15,8 +18,6 @@ export const PricingWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  width: 100%;
 
   @media screen and (max-width: 960px) {
     display: flex;
@@ -25,32 +26,62 @@ export const PricingWrapper = styled.div`
   }
 `;
 
-export const PricingHeading = styled.h1`
-  color: ${colors.primary};
-  font-size: 48px;
-  margin-bottom: 5px;
-  font-weight: 600;
-  letter-spacing: 3px;
-`;
-
-export const PricingSubHeading = styled.h3`
-  color: ${colors.pink};
-  font-size: 24px;
-  margin-bottom: 10px;
+export const HeadingContainer = styled.div`
+  display: flex;
+  width: 100%;
+  padding-left: 100px;
+  padding-bottom: 100px;
 
   @media screen and (max-width: 960px) {
-    text-align: center;
+    padding-left: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 50px;
+  }
+`;
+
+export const PricingHeading = styled.h1`
+  color: ${colors.primary};
+  font-size: 35px;
+  font-family: 'Product Sans Bold';
+  margin-bottom: 5px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 0px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-right: 30px;
+    font-size: 29px;
+  }
+`;
+
+export const Span = styled.span`
+  font-family: 'Product Sans Thin Regular';
+  font-weight: 100;
+  font-size: 35px;
+  color: ${colors.primary};
+
+  @media screen and (max-width: 768px) {
+    font-size: 29px;
   }
 `;
 
 export const DottedLine = styled.img`
   width: 34%;
   position: absolute;
-  top: 1010px;
+  top: 1060px;
   left: 480px;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 414px) {
     display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 50%;
+    left: 200px;
+    top: 800px;
   }
 `;
 
@@ -62,8 +93,13 @@ export const CardContainer = styled.div`
   z-index: 10;
   padding: 0 200px;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 414px) {
     flex-direction: column;
     margin-top: 20px;
+    padding: 0 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 30px;
   }
 `;

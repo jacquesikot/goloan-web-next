@@ -19,8 +19,8 @@ export default function Home() {
       </Head>
       <NavBar />
       <HeroSection {...homeObjOne} button />
-      {/* <HowItWorks />
-      <InfoSection {...homeObjThree} />
+      <HowItWorks />
+      {/* <InfoSection {...homeObjThree} />
       <InfoSection {...homeObjFour} />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjFive} /> */}

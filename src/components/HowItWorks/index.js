@@ -4,9 +4,10 @@ import {
   PricingSection,
   PricingWrapper,
   PricingHeading,
-  PricingSubHeading,
   DottedLine,
   CardContainer,
+  Span,
+  HeadingContainer,
 } from './StepsElements.js';
 import { data } from './data';
 
@@ -14,10 +15,11 @@ function Pricing() {
   return (
     <PricingSection>
       <PricingWrapper>
-        <PricingHeading>How it Works?</PricingHeading>
-        <PricingSubHeading>
-          It's a easy as these three steps...
-        </PricingSubHeading>
+        <HeadingContainer>
+          <PricingHeading>
+            HOW IT WORKS ? <Span> It's As Easy As These Three Steps ...</Span>
+          </PricingHeading>
+        </HeadingContainer>
         <DottedLine
           src={require('../../images/dottedLine.svg')}
           width="500px"

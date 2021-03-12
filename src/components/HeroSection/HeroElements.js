@@ -80,7 +80,7 @@ export const Heading = styled.h1`
   color: ${({ lightText }) => (lightText ? colors.light : colors.primary)};
 
   @media screen and (max-width: 960px) {
-    font-size: 40px;
+    font-size: 39px;
   }
   @media screen and (max-width: 414px) {
     display: flex;
