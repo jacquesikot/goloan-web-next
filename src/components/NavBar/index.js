@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { TiTimes } from 'react-icons/ti';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { IconContext } from 'react-icons/lib';
+import Scroll from 'react-scroll';
 
 import { Button } from '../../globalStyles';
 import { colors } from '../../constants/theme';
@@ -21,6 +22,8 @@ import {
 } from './NavBarElements';
 
 function Navbar() {
+  const ScrollLink = Scroll.ScrollLink;
+
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -58,9 +61,7 @@ function Navbar() {
               </NavItem>
               <Space2 />
               <NavItem>
-                <NavLinks href="/services" onClick={closeMobileMenu}>
-                  Services
-                </NavLinks>
+                <ScrollLink>Services</ScrollLink>
               </NavItem>
               <Space2 />
               <NavItem>

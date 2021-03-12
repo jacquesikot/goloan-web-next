@@ -48,7 +48,7 @@ function InfoSection({
             </InfoColumn>
             <InfoColumn>
               <ImgWrapper start={start}>
-                <Img src={img} alt={alt} />
+                <Img src={img} alt={alt} width={635} height={536} />
               </ImgWrapper>
             </InfoColumn>
           </InfoRow>

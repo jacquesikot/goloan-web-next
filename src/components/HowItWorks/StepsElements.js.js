@@ -81,7 +81,7 @@ export const DottedLine = styled.img`
   @media screen and (max-width: 768px) {
     width: 50%;
     left: 200px;
-    top: 800px;
+    top: 900px;
   }
 `;
 

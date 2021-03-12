@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { IoIosArrowDropright } from 'react-icons/io';
+import Image from 'next/image';
 
 import { colors } from '../../constants/theme';
 
@@ -60,7 +61,7 @@ export const TopLine = styled.div`
   margin-bottom: 30px;
 `;
 
-export const Img = styled.img`
+export const Img = styled(Image)`
   padding-right: 0;
   border: 0;
   max-width: 100%;

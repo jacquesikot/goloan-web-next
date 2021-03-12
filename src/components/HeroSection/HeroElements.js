@@ -80,7 +80,7 @@ export const Heading = styled.h1`
   margin-bottom: 10px;
   font-size: 55px;
   font-family: 'Product Sans Black Regular';
-  max-width: 70%;
+  max-width: 85%;
   line-height: 1.1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? colors.light : colors.primary)};
@@ -92,7 +92,7 @@ export const Heading = styled.h1`
     display: flex;
     max-width: 100%;
     justify-content: center;
-    font-size: 50px;
+    font-size: 45px;
   }
 `;
 
