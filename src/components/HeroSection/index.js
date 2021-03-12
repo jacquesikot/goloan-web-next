@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
-import { Container, Button, BtnWrapper } from '../../globalStyles';
+import { colors } from '../../constants/theme';
+import { BtnWrapper } from '../../globalStyles';
 import {
   InfoSec,
   InfoRow,
@@ -33,39 +33,44 @@ function InfoSection({
   start,
   button,
 }) {
+  const returnSpan = () => <Span>goloan.</Span>;
+
   return (
     <>
       <InfoSec lightBg={lightBg}>
-        <Container>
-          <InfoRow imgStart={imgStart}>
-            <InfoColumn>
-              <TextWrapper>
-                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                {button ? (
-                  <Link href="/sign-up">
-                    <BtnWrapper>
-                      <BadgeContainer>
-                        <IOSBadge
-                          src={require('../../images/appStoreBadge.svg')}
-                        />
-                        <AndroidBadge
-                          src={require('../../images/playStoreBadge.svg')}
-                        />
-                      </BadgeContainer>
-                    </BtnWrapper>
-                  </Link>
-                ) : null}
-              </TextWrapper>
-            </InfoColumn>
-            <InfoColumn>
-              <ImgWrapper start={start}>
-                <Img src={img} alt={alt} />
-              </ImgWrapper>
-            </InfoColumn>
-          </InfoRow>
-        </Container>
+        <InfoRow imgStart={imgStart}>
+          <InfoColumn>
+            <TextWrapper>
+              <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
+              <Heading lightText={lightText}>{headline}</Heading>
+              <Subtitle lightTextDesc={lightTextDesc}>
+                Are you a serving NYSC corper? or salary earner? Get access to
+                immediate loans and power your monthly hustle with
+                <span
+                  style={{
+                    color: colors.primary,
+                    fontFamily: 'Product Sans Bold',
+                  }}
+                >
+                  {' '}
+                  goloan.
+                </span>
+              </Subtitle>
+
+              <BadgeContainer>
+                <IOSBadge src={require('../../images/appStoreBadge.svg')} />
+                <AndroidBadge
+                  src={require('../../images/playStoreBadge.svg')}
+                />
+              </BadgeContainer>
+            </TextWrapper>
+          </InfoColumn>
+          <InfoColumn>
+            <ImgWrapper start={start}>
+              <Img src={img} alt={alt} />
+            </ImgWrapper>
+          </InfoColumn>
+        </InfoRow>
       </InfoSec>
     </>
   );

@@ -14,34 +14,19 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
-  padding: 0 130px;
-
-  @media screen and (max-width: 960px) {
-    padding: 0 80px;
-  }
-
-  @media screen and (max-width: 414px) {
-    padding: 0 50px;
-  }
 `;
 
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 80px;
-  padding-top: 20px;
 `;
 
 export const NavLogo = styled.div`
-  justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
   display: flex;
-  padding-top: 10px;
-
-  @media screen and (max-width: 960px) {
-    padding-bottom: 20px;
-  }
 `;
 
 export const MobileIcon = styled.div`
@@ -49,19 +34,8 @@ export const MobileIcon = styled.div`
 
   @media screen and (max-width: 960px) {
     display: block;
-    transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    margin-bottom: 60px;
-    margin-right: 50px;
-  }
-
-  @media screen and (max-width: 375px) {
-    margin-right: -100px;
-  }
-
-  @media screen and (min-width: 400px) {
-    margin-right: -80px;
   }
 `;
 
@@ -72,7 +46,17 @@ export const NavMenu = styled.ul`
   text-align: center;
 
   @media screen and (max-width: 960px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: ${({ click }) => (click ? 0 : '-100%')};
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: ${colors.dark};
+    color: ${colors.light};
   }
 `;
 
@@ -94,7 +78,7 @@ export const NavItemBtn = styled.li`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 50%;
     height: 120px;
   }
 `;
@@ -110,16 +94,22 @@ export const NavLinks = styled.div`
   font-size: 15px;
   letter-spacing: 0.4px;
 
+  &:hover {
+    color: rgba(16, 10, 57, 0.65);
+    transition: all 0.3s ease;
+  }
+
   @media screen and (max-width: 960px) {
     text-align: center;
     padding: 2rem;
     width: 100%;
     display: table;
-    color: ${colors.white};
-  }
+    color: ${colors.light};
 
-  &:hover {
-    color: ${colors.pink};
+    &:hover {
+      color: ${colors.pink};
+      transition: all 0.3s ease;
+    }
   }
 `;
 

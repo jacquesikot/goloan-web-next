@@ -3,7 +3,12 @@ import styled from 'styled-components';
 import { colors } from './constants/theme';
 
 export const Container = styled.div`
+  z-index: 1;
   width: 100%;
+  padding: 0 100px;
+  @media screen and (max-width: 991px) {
+    padding: 0 30px;
+  }
 `;
 
 export const BtnWrapper = styled.nav`
