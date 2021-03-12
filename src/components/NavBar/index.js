@@ -22,8 +22,6 @@ import {
 } from './NavBarElements';
 
 function Navbar() {
-  const ScrollLink = Scroll.ScrollLink;
-
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -61,11 +59,9 @@ function Navbar() {
               </NavItem>
               <Space2 />
               <NavItem>
-                <ScrollLink>
-                  <NavLinks href="#services" onClick={closeMobileMenu}>
-                    Services
-                  </NavLinks>
-                </ScrollLink>
+                <NavLinks href="#services" onClick={closeMobileMenu}>
+                  Services
+                </NavLinks>
               </NavItem>
               <Space2 />
               <NavItem>
