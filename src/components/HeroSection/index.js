@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 import { colors } from '../../constants/theme';
 import { BtnWrapper } from '../../globalStyles';
@@ -67,7 +66,7 @@ function InfoSection({
           </InfoColumn>
           <InfoColumn>
             <ImgWrapper start={start}>
-              <Img src={img} alt={alt} />
+              <Img src={img} alt={alt} width={800} height={850} />
             </ImgWrapper>
           </InfoColumn>
         </InfoRow>

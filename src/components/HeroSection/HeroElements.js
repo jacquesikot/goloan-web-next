@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 import { colors } from '../../constants/theme';
 import { Container } from '../../globalStyles';
@@ -65,7 +66,7 @@ export const TopLine = styled.div`
   margin-bottom: 16px;
 `;
 
-export const Img = styled.img`
+export const Img = styled(Image)`
   padding-right: 0;
   border: 0;
   max-width: 100%;
