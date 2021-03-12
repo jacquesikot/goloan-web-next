@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { TiTimes } from 'react-icons/ti';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { IconContext } from 'react-icons/lib';
 
@@ -48,7 +48,7 @@ function Navbar() {
               <Img src={require('../../images/goloanLogo.svg')} />
             </NavLogo>
             <MobileIcon onClick={handleClick}>
-              {click ? <FaTimes /> : <HiMenuAlt3 />}
+              {click ? <TiTimes /> : <HiMenuAlt3 />}
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>

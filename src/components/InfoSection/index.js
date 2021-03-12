@@ -1,8 +1,7 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { motion, useAnimation } from 'framer-motion';
 
-import { Container, Button, BtnWrapper } from '../../globalStyles';
+import { Container } from '../../globalStyles';
 import {
   InfoSec,
   InfoRow,
@@ -13,11 +12,12 @@ import {
   Subtitle,
   ImgWrapper,
   Img,
-  FirstText,
+  ActionContainer,
+  Action,
+  ActionIcon,
 } from './InfoSectionElements';
 
 function InfoSection({
-  primary,
   lightBg,
   topLine,
   lightTopLine,
@@ -25,56 +25,11 @@ function InfoSection({
   lightTextDesc,
   headline,
   description,
-  buttonLabel,
   img,
   alt,
   imgStart,
   start,
-  button,
 }) {
-  const controls = useAnimation();
-
-  const variants = {
-    visible: {
-      y: 5,
-      transition: {
-        repeat: Infinity,
-        repeatType: 'reverse',
-        ease: 'easeOut',
-        duration: 1,
-      },
-    },
-  };
-
-  const variants2 = {
-    visible: {
-      x: 0,
-      type: 'spring',
-      transition: {
-        duration: 1.5,
-        ease: 'easeOut',
-      },
-    },
-    hidden: {
-      x: 1300,
-    },
-  };
-
-  const onScroll = () => {
-    const scrollPosition = window.scrollY + window.innerHeight;
-    // console.log(scrollPosition);
-    if (scrollPosition > 3721) {
-      controls.start('visible');
-    }
-  };
-
-  useLayoutEffect(() => {
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  const scrollRef = useRef(null);
-
   return (
     <>
       <InfoSec lightBg={lightBg}>
@@ -85,6 +40,10 @@ function InfoSection({
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
+                <ActionContainer>
+                  <Action>Learn more</Action>
+                  <ActionIcon size={20} />
+                </ActionContainer>
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>

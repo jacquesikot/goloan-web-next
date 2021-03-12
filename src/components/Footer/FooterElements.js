@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { colors } from '../../constants/theme';
 
 export const FooterContainer = styled.div`
-  background-color: ${colors.primaryDark};
+  background-color: ${colors.primary};
   padding: 4rem 0 2rem 0;
   margin-top: 100px;
   display: flex;
@@ -49,7 +49,8 @@ export const Form = styled.form`
 
 export const FormInput = styled.input`
   padding: 10px 20px;
-  border-radius: 7px;
+  border-radius: 5px;
+  height: 50px;
   margin-right: 10px;
   outline: none;
   border: none;

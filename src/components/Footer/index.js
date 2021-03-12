@@ -26,7 +26,7 @@ function Footer() {
       </SocialLogo>
       <FooterSubscription>
         <FooterSubHeading>
-          Get early access to our service once we launch
+          Get early access to our services once we launch
         </FooterSubHeading>
         <FooterSubText>You can unsubscribe at any time.</FooterSubText>
         <Form>

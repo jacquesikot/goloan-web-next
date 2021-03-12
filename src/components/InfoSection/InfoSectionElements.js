@@ -1,64 +1,63 @@
 import styled from 'styled-components';
+import { IoIosArrowDropright } from 'react-icons/io';
 
 import { colors } from '../../constants/theme';
 
 export const InfoSec = styled.div`
   color: ${colors.white};
   padding: 100px 0;
-  background: ${({ lightBg }) => (lightBg ? colors.white : colors.veryDark)};
 
-  @media screen and (max-width: 960px) {
-    padding: 0 0;
+  @media screen and (max-width: 768px) {
+    padding: 0;
   }
 `;
 
 export const InfoRow = styled.div`
   display: flex;
-  margin: 0 35px -15px 35px;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   flex-direction: ${({ imgStart }) => (imgStart ? 'row-reverse' : 'row')};
 `;
 
 export const InfoColumn = styled.div`
   margin-bottom: 15px;
-  padding-right: 15px;
-  padding-left: 15px;
   flex: 1;
-  max-width: 50%;
+  display: flex;
+  max-width: 43%;
   flex-basis: 50%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 414px) {
     max-width: 100%;
     flex-basis: 100%;
     display: flex;
     justify-content: center;
+    text-align: center;
   }
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 540px;
+  max-width: 100%;
   margin-top: 80px;
   padding-bottom: 60px;
 
   @media screen and (max-width: 768px) {
     padding-bottom: 65px;
+    max-width: 100%;
   }
 `;
 
 export const ImgWrapper = styled.div`
-  max-width: 555px;
+  max-width: 100%;
   display: flex;
   justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
 `;
 
 export const TopLine = styled.div`
   color: ${({ lightTopLine }) => (lightTopLine ? colors.grey : colors.pink)};
-  font-size: 18px;
+  font-size: 20px;
   line-height: 16px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 `;
 
 export const Img = styled.img`
@@ -75,16 +74,40 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
+  /* width: 70%; */
   color: ${({ lightText }) => (lightText ? colors.light : colors.primary)};
+
+  @media screen and (max-width: 960px) {
+    font-size: 39px;
+    width: 100%;
+  }
+  @media screen and (max-width: 414px) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 30px;
+  }
 `;
 
 export const Subtitle = styled.p`
   max-width: 440px;
+  /* width: 70%; */
   margin-bottom: 35px;
-  font-size: 18px;
-  line-height: 24px;
-  color: ${({ lightTextDesc }) =>
-    lightTextDesc ? colors.grey : colors.primary};
+  font-size: 25px;
+  font-family: 'Product Sans Light Regular';
+  font-weight: 100;
+  line-height: 30px;
+  color: rgba(16, 10, 57, 0.65);
+
+  @media screen and (max-width: 960px) {
+    font-size: 22px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 414px) {
+    font-size: 18px;
+    line-height: 25px;
+  }
 `;
 
 export const FirstText = styled.p`
@@ -102,4 +125,23 @@ export const FirstText = styled.p`
   font-family: 'Product Sans Black Regular';
   box-shadow: 0 4px 8px 0 rgba(169, 179, 193, 0.2),
     0 6px 20px 0 rgba(169, 179, 193, 0.19);
+`;
+
+export const ActionContainer = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+
+  @media screen and (max-width: 414px) {
+    justify-content: center;
+  }
+`;
+export const Action = styled.p`
+  font-size: 18px;
+  color: ${colors.primary};
+`;
+export const ActionIcon = styled(IoIosArrowDropright)`
+  width: 40px;
+  color: ${colors.primary};
 `;

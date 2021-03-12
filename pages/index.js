@@ -8,6 +8,7 @@ import {
   homeObjFive,
 } from '../src/data/homeData';
 import NavBar from '../src/components/NavBar';
+import Footer from '../src/components/Footer';
 import { InfoSection, HowItWorks, HeroSection } from '../src/components';
 
 export default function Home() {
@@ -20,10 +21,11 @@ export default function Home() {
       <NavBar />
       <HeroSection {...homeObjOne} button />
       <HowItWorks />
-      {/* <InfoSection {...homeObjThree} />
+      <InfoSection {...homeObjThree} />
       <InfoSection {...homeObjFour} />
       <InfoSection {...homeObjTwo} />
-      <InfoSection {...homeObjFive} /> */}
+      <InfoSection {...homeObjFive} />
+      <Footer />
     </>
   );
 }

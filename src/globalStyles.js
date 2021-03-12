@@ -21,7 +21,7 @@ export const Button = styled.button`
   background: ${({ primary }) => (primary ? colors.light : colors.pink)};
   white-space: nowrap;
   padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
-  color: ${colors.primary};
+  color: ${({ primary }) => (primary ? colors.primary : colors.light)};
   font-size: 15px;
   font-family: 'Product Sans Bold';
   font-weight: 600;

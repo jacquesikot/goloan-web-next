@@ -9,6 +9,7 @@ export const InfoSec = styled.div`
 
   @media screen and (max-width: 768px) {
     padding: 0px;
+    padding-bottom: 60px;
   }
 `;
 
@@ -50,6 +51,10 @@ export const ImgWrapper = styled.div`
   max-width: 555px;
   display: flex;
   justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
+
+  @media screen and (max-width: 414px) {
+    max-width: 100%;
+  }
 `;
 
 export const TopLine = styled.div`

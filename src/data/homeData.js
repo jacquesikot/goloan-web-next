@@ -32,10 +32,10 @@ export const homeObjTwo = {
   topLine: 'Points & Rewards',
   headline: 'Earn meaningful points for all your transactions with us',
   description:
-    'For every loan, payment or purchase you make with us, you get points that allow you do more',
+    'For every loan, payment or purchase you make with us, you get points that allow you do more.',
   buttonLabel: 'Learn More',
-  imgStart: 'start',
-  img: require('../images/svg-4.svg'),
+  imgStart: '',
+  img: require('../images/points.png'),
   alt: 'points & rewards',
   start: '',
 };
@@ -47,14 +47,14 @@ export const homeObjThree = {
   lightText: false,
   lightTextDesc: false,
   topLine: 'Instant Loans',
-  headline: 'Keep track of your credit history across financial institutions',
+  headline: 'Access to credit now made simple. Just Goloan',
   description:
-    'No forms, guarantors, processing fees or tidious sign up process',
+    'No forms, guarantors, processing fees or tidious sign up process.',
   buttonLabel: '',
-  imgStart: 'start',
-  img: require('../images/svg-3.svg'),
+  imgStart: '',
+  img: require('../images/instantLoan.png'),
   alt: 'instant loan',
-  start: 'true',
+  start: '',
 };
 
 export const homeObjFour = {
@@ -64,12 +64,12 @@ export const homeObjFour = {
   lightText: false,
   lightTextDesc: false,
   topLine: 'Fast Payments',
-  headline: 'Enjoy hassle free payments from our mobile apps at no cost',
+  headline: 'Enjoy hassle free payments at no cost',
   description:
-    'You can pay your bills and recharge airtime straight from our app - at the lowest possible cost',
+    'You can send money to anyone, pay all your bills, and recharge airtime, with just a few taps on your smartphone - and always at the lowest possible cost.',
   buttonLabel: 'Sign Up Now',
-  imgStart: '',
-  img: require('../images/svg-2.svg'),
+  imgStart: 'start',
+  img: require('../images/freePayment.png'),
   alt: 'fast payment',
   start: 'true',
 };
@@ -80,13 +80,13 @@ export const homeObjFive = {
   lightTopLine: false,
   lightText: false,
   lightTextDesc: false,
-  topLine: 'USSD',
-  headline: 'Enjoy hassle free payments from our mobile apps at no cost',
+  topLine: 'Access',
+  headline: 'Reach us in any way you like',
   description:
-    'You can pay your bills and recharge airtime straight from our app - at the lowest possible cost',
+    'We are available to you on all your favorite and convinient mediums, USSD, Mobile and  Web Apps and even through a phone call, just reach out',
   buttonLabel: 'Sign Up Now',
-  imgStart: '',
-  img: require('../images/oldPhone.svg'),
+  imgStart: 'start',
+  img: require('../images/access.png'),
   alt: 'fast payment',
   start: 'true',
 };
